@@ -1,0 +1,19 @@
+<h1>ToDo#edit</h1>
+<h1> Editing: <%= @todo.title %> </h1>
+
+<%= form_for @todo do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title, placeholder: 'Title', required: true %>
+    <br />
+  
+    <%= f.label :body, placeholder: 'Additional details', required:true %>
+    <%= f.text_field :body %>
+    <br />
+
+    <%= f.label :completed %>
+    <%= f.check_box :completed %>
+    <br />
+
+    <%= f.submit %>
+<% end %>
+

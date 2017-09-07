@@ -1,0 +1,14 @@
+<h1>TodoItems#show</h1>
+
+<h1><%= @todos.title %></h1>
+<i>Title: <%= @todos.title %></i>
+<br />
+<i>Created: <%= @todos.created_at %> </i>
+<hr />
+<p><%= @todos.body =%></p>
+
+<%= link_to 'Edit', edit_todo_item_path(@todos) %>
+
+<%= link_to 'Back', root_path %>
+
+<p>Find me in app/views/todo_items/show.html.erb</p>

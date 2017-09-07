@@ -1,0 +1,18 @@
+<h1>TodoItems#index</h1>
+<p>Find me in app/views/todo_items/index.html.erb</p>
+
+<%= link_to 'New ToDo Item',  new_todo_item_path %>
+<hr />
+
+<% @todos.each do |todo| %>
+    <div>
+        <h3><%= link_to todo.title, todo_item_path(todo) %></h3>
+        
+        <i>Title: <%= todo.title %></i>
+        <!-- <p>Body: <%= todo.body %></p> -->
+        <strong>Completed?: <%= todo.completed ? 'Yes' : 'No' %></strong>
+
+        <%= link_to 'Delete', todo_item_path(todo), method: :delete %>
+    </div>
+    <hr />
+<% end %>
